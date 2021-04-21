@@ -1,0 +1,9 @@
+name: EatClear
+version: ${project.version}
+main: eatclear.food.base
+api-version: 1.16
+commands:
+  eatclear:
+    usage: /eatclear <start/stop>
+authors: [ xLunarz ]
+description: Whenever you eat food, your inventory gets cleared.
