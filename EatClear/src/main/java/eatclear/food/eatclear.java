@@ -1,5 +1,3 @@
-package eatclear.food.base;
-
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
@@ -45,6 +43,7 @@ public class eatclear extends JavaPlugin implements Listener,CommandExecutor {
 //When you eat food, your items get cleared
     @EventHandler
     public void onEat(PlayerItemConsumeEvent a) {
+//Excluding potions and milk because those count as consumed items, when we only want food to clear your inventory
         if(isStarted && !a.getItem().getType().equals(Material.POTION) && !a.getItem().getType().equals(Material.MILK_BUCKET)) {
             Location b = a.getPlayer().getLocation();
             Player c = a.getPlayer();
